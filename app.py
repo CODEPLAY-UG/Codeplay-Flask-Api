@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-
+from flask_cors import CORS
 interns = []
 
 class Intern:
@@ -10,6 +10,8 @@ class Intern:
         self.end_date = end_date
 
 app = Flask(__name__)
+
+CORS(app, origins=['http://localhost:3000/','http://localhost:3000'], methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
 @app.route('/interns', methods=['POST'])
 def register_intern():
