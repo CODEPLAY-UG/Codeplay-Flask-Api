@@ -19,7 +19,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: mugumbyabenon/codeplay-flask-api:latest  
+          tags: mugumbyabenon/codeplay-react-api:latest  
       - name: Setup SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -30,7 +30,9 @@ jobs:
           script: |
              docker rmi -f $(docker images -aq)
              docker pull mugumbyabenon/codeplay-flask-api
+             docker pull mugumbyabenon/codeplay-react-api
              docker stop $(docker ps -a -q)
+             docker run --restart=always -d -p 80:80 mugumbyabenon/codeplay-react-api
              docker run --restart=always -d -p 8000:5000 mugumbyabenon/codeplay-flask-api
 
      
