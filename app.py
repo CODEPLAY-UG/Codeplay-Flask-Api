@@ -8,6 +8,7 @@ class Intern:
         self.email = email
         self.start_date = start_date
         self.end_date = end_date
+        
 
 app = Flask(__name__)
 
