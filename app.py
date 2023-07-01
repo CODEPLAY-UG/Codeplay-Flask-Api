@@ -12,7 +12,7 @@ class Intern:
 
 app = Flask(__name__)
 
-CORS(app, origins=['http://localhost:3000/','http://localhost:3000','http://ec2-16-170-240-194.eu-north-1.compute.amazonaws.com/'], methods=['GET', 'POST'], allow_headers=['Content-Type'])
+CORS(app, origins=['*'], methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
 @app.route('/interns', methods=['POST'])
 def register_intern():
