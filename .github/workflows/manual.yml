@@ -1,9 +1,9 @@
 name: Run Docker Container
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - closed
       
       
 jobs:
