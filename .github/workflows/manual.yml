@@ -22,7 +22,6 @@ jobs:
           push: true
           tags: mugumbyabenon/codeplay-flask-api:latest  
       - name: Setup SSH
-        if: contains(github.event.head_commit.message, 'deploy')
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.HOST }}
