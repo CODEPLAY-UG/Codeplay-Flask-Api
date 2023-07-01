@@ -29,8 +29,9 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
+             docker rmi -f mugumbyabenon/codeplay-flask-api
              docker pull mugumbyabenon/codeplay-flask-api
              docker stop $(docker ps -a -q)
-             docker run --restart=always -d -p 80:8000 mugumbyabenon/codeplay-flask-api
+             docker run --restart=always -d -p 80:5000 mugumbyabenon/codeplay-flask-api
 
      
