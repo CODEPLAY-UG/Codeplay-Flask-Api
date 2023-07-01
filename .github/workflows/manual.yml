@@ -4,8 +4,7 @@ on:
   pull_request:
     types:
       - closed
-      
-      
+            
 jobs:
   run-docker-container:
     runs-on: ubuntu-latest
@@ -32,6 +31,6 @@ jobs:
              docker rmi -f $(docker images -aq)
              docker pull mugumbyabenon/codeplay-flask-api
              docker stop $(docker ps -a -q)
-             docker run --restart=always -d -p 80:5000 mugumbyabenon/codeplay-flask-api
+             docker run --restart=always -d -p 8000:5000 mugumbyabenon/codeplay-flask-api
 
      
