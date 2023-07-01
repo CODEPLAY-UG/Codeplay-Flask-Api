@@ -33,6 +33,6 @@ jobs:
              docker pull mugumbyabenon/codeplay-react-api
              docker stop $(docker ps -a -q)
              docker run --restart=always -d -p 8000:5000 mugumbyabenon/codeplay-flask-api
-             docker run --restart=always -d -p 80:80 mugumbyabenon/codeplay-react-api
+             docker run --restart=always -d -p 80:3000 mugumbyabenon/codeplay-react-api
             
      
