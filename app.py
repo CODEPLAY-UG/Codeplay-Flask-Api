@@ -13,7 +13,7 @@ import uuid
 interns = []
 
 
-PATH_TO_BUNDLE_YAML = '/Users/mushana/Desktop/MY-GIT-CODE/Codeplay-Flask-Api/connect-bundle-CODEPALY UG.yaml'
+PATH_TO_BUNDLE_YAML = './connect-bundle-CODEPALY UG.yaml'
 
 
 def get_cluster():
