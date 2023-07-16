@@ -60,7 +60,6 @@ CORS(app, origins=['*'], methods=['GET', 'POST'], allow_headers=['Content-Type']
 
 @app.route('/')
 def index():
-  
     return 'CodePlay API!'
 
 @app.route('/interns', methods=['POST'])
